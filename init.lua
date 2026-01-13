@@ -8,4 +8,4 @@ require("telescope").load_extension("file_browser")
 require("nvim-tree").setup({})
 require('audacious').setup()
 
-vim.g.vimtex_quickfix_mode = 2  -- use chktex for lintin
+vim.g.vimtex_quickfix_mode = 2  -- use chktex for linting

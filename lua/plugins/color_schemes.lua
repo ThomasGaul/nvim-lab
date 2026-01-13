@@ -1,54 +1,38 @@
 return {
-	{
-		"thesimonho/kanagawa-paper.nvim",
-		lazy = false,
-		priority = 1000,
-		init = function()
-			vim.cmd.colorscheme("kanagawa-paper-ink")
-		end,
-		integrations = {
-			wezterm = {
-				enabled = true,
-				path = (os.getenv("TEMP") or "/tmp") .. "/nvim-theme"
-			},
-		},
-		opts = { ... },
-	},
-	{
-		"rebelot/kanagawa.nvim",
-		lazy = false,
-		priority = 1000,
-		init = function()
-			vim.cmd.colorscheme("kanagawa")
-		end
-	},
-	{
-		"ellisonleao/gruvbox.nvim",
-		lazy = false,
-		priority = 1000,
-		init = function()
-			vim.cmd.colorscheme("gruvbox")
-		end,
-		integrations = {
-			wezterm = {
-				enabled = true,
-				path = (os.getenv("TEMP") or "/tmp") .. "/nvim-theme"
-			},
-		},
-		opts = { ... },
-	},
-	{
-		"catppuccin/nvim", name = "catppuccin", priority = 1000
-	},
-	{
-		"folke/tokyonight.nvim",
-		lazy = false,
-		priority = 1000,
-		opts = {},
-	},
-	{
-		'AlexvZyl/nordic.nvim',
-		lazy = false,
-		priority = 1000,
-	}
+        {
+                "thesimonho/kanagawa-paper.nvim",
+                lazy = false,
+                -- priority = 1000,
+                init = function()
+                        vim.cmd.colorscheme("kanagawa-paper-ink")
+                end,
+                integrations = {
+                        wezterm = {
+                                enabled = true,
+                                path = (os.getenv("TEMP") or "/tmp")
+                                        .. "/nvim-theme",
+                        },
+                },
+                opts = { ... },
+        },
+        {
+                "ellisonleao/gruvbox.nvim",
+                priority = 1000,
+                config = function()
+                        require("gruvbox").setup({
+                                terminal_colors = true,
+                                bold = true,
+                                italic = {
+                                        strings = false,
+                                        comments = false,
+                                },
+                                contrast = "hard",
+                                palette_overrides = {
+                                        light1 = "#cdbf9c",
+                                },
+                        })
+                        -- set background specific contrast when added
+                        vim.cmd.colorscheme("gruvbox")
+                end,
+        },
 }
