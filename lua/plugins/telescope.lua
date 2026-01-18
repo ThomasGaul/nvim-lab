@@ -23,7 +23,7 @@ return {
                 extensions = {
                     bibtex = {
                         global_files = {
-                            "/home/tom/Documents/bm_bibliography.bib",
+                            "/home/tom/Documents/literature.bib",
                         },
                     },
                     citation_max_auth = 1,
