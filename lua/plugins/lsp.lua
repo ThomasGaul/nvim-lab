@@ -252,7 +252,7 @@ return {
                 "pylsp",
                 "rust_analyzer",
                 "texlab",
-                "ltex",
+                -- "ltex",
                 "marksman",
                 -- "r_language_server",
                 -- "julials",

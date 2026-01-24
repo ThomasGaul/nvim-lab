@@ -290,3 +290,17 @@ vim.keymap.set(
     "<CMD>Neogen<CR>",
     { desc = "Generate documentation for object under cursor" }
 )
+
+-- Keymaps for toggling ltex-ls
+vim.keymap.set(
+    "n",
+    "<leader>le",
+    "<CMD>LspStart ltex<CR>",
+    { desc = "Enable ltex-ls in current buffer"}
+)
+vim.keymap.set(
+    "n",
+    "<leader>ld",
+    "<CMD>LspStop ltex<CR>",
+    { desc = "Enable ltex-ls in current buffer"}
+)
