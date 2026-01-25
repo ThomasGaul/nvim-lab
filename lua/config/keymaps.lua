@@ -296,11 +296,25 @@ vim.keymap.set(
     "n",
     "<leader>le",
     "<CMD>LspStart ltex<CR>",
-    { desc = "Enable ltex-ls in current buffer"}
+    { desc = "Enable ltex-ls in current buffer" }
 )
 vim.keymap.set(
     "n",
     "<leader>ld",
     "<CMD>LspStop ltex<CR>",
-    { desc = "Enable ltex-ls in current buffer"}
+    { desc = "Disable ltex-ls in current buffer" }
+)
+
+-- Keymaps for toggling python linting
+vim.keymap.set(
+    "n",
+    "<leader>pd",
+    "<CMD>LspStop ruff<CR><CMD>LspStop pylsp<CR>",
+    { desc = "Disable python linting in current buffer" }
+)
+vim.keymap.set(
+    "n",
+    "<leader>pe",
+    "<CMD>LspStart ruff<CR><CMD>LspStart pylsp<CR>",
+    { desc = "Enable python linting in current buffer" }
 )
