@@ -14,7 +14,7 @@ return {
   title: "{}"
   date: {}
   ---
-  <!--LTeX: enabled=false-->
+  
   tags: {}
   
   ]],
